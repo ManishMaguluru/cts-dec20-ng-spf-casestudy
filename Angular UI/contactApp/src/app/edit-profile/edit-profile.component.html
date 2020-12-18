@@ -1,0 +1,27 @@
+<p>edit-profile works!</p>
+<div class="container">
+    <h3>Edit Profile Form</h3>
+    <hr />
+    <form #editProfileForm = "ngForm" (ngSubmit) = "handleEditProfile(editProfileForm.value)">
+        <div class = "row">
+            <div class = "col-2">
+                Change your Password:
+            </div>
+            <div class = "col-4">
+                <input type = "password" name = "password" [(ngModel)] = "password" class="form-control">
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-2">
+                Change your phone number:
+            </div>
+            <div class="col-4">
+                <input type = "number" name = "phonenumber" [(ngModel)] = "phonenumber" class="form-control">
+            </div> 
+        </div>
+        
+        <div>
+            <input type = "submit" value = "Edit Profile" class = "btn btn-primary">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<p>view-all-contacts works!</p>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Contact Name</th>
+                <th>Phone Number</th>
+                <th>Edit Contact</th>
+                <th>Delete Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let c of contacts">
+                <td *ngIf = "c.contactName">{{c.contactName}}</td>
+                <td *ngIf = "c.contactpno">{{c.contactpno}}</td>
+                <td class = "col-2">
+                    <a routerLink = "editContacts" class = "btn btn-primary">Edit Contact</a>
+                </td>
+                <td class = "col-2">
+                    <a routerLink = "deleteContacts" class = "btn btn-primary">Delete Contact</a>
+                </td>
+            </tr>
+        </tbody>
+           
+        
+    </table>
+</div>

@@ -1,0 +1,28 @@
+
+<div class="container">
+    <h3>Edit contact Form</h3>
+    <hr />
+{{contactId}} is here
+    <form #editContactForm = "ngForm" (ngSubmit) = "handleEditContact(editContactForm.value)">
+        <div class = "row">
+            <div class = "col-2">
+                Enter Contact Name:
+            </div>
+            <div class = "col-4">
+                <input type = "text" name = "contactName" [(ngModel)] = "contactName" class="form-control">
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-2">
+                Enter Contact Number:
+            </div>
+            <div class="col-4">
+                <input type = "number" name = "contactpno" [(ngModel)] = "phonenumber" class="form-control">
+            </div> 
+        </div>
+        
+        <div>
+            <input type = "submit" value = "Edit Profile" class = "btn btn-primary">
+        </div>
+    </form>
+</div>

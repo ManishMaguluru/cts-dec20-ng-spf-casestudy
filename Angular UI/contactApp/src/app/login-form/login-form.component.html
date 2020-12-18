@@ -1,0 +1,21 @@
+<div>
+    <h3>Login Form</h3>
+    <hr />
+    <h2 class="alert alert-danger" [hidden] = "isinvalid">{{message}}</h2>
+    <form #loginForm = "ngForm" (ngSubmit) = "handleLogin(loginForm.value)">
+        <div>
+            <input type = "number" name = "id" [(ngModel)] = "id" placeholder="Enter id" 
+            #profileid = "ngModel" required autocomplete="off">
+            <div class="alert alert-danger" [hidden] =  "profileid.valid || profileid.pristine">Login Id is Mandatory</div>
+            
+        </div>
+        <div>
+            <input type = "password" name = "password" [(ngModel)] = "password" #pwd = "ngModel"
+                placeholder="Enter password" required>
+                <div class="alert alert-danger" [hidden] =  "pwd.valid || pwd.pristine">Password is Mandatory</div>
+        </div>
+        <div>
+            <input type = "submit" value = "Login"  [disabled] = "loginForm.invalid" class = "btn btn-primary">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,30 @@
+<p>success works!</p>
+<h3>User with an id {{loginId}} Logged In</h3>
+<div class = "row">
+    <div class = "col-2">
+      <a routerLink = "addContacts" class = "btn btn-primary">Add Contact</a> 
+    </div>
+   
+    <div class = "col-2">
+      <a routerLink = "editContacts" class = "btn btn-primary">Edit Contact</a>
+    </div>
+
+    <div class = "col-2">
+        <a routerLink = "editProfile" class = "btn btn-primary">Edit Profile</a>
+    </div>
+      
+    <div class = "col-2">
+        <a routerLink = "viewContacts" class = "btn btn-primary">View Contacts</a>
+    </div>
+      
+    <div class = "col-2">
+        <a routerLink = "deleteContacts" class = "btn btn-primary">Delete Contact</a>
+    </div>
+      
+    <div class = "col-2">
+        <a routerLink = "deleteProfile" class = "btn btn-primary">Delete Profile</a>
+    </div>
+
+</div>
+  <hr /> 
+  <router-outlet></router-outlet>
